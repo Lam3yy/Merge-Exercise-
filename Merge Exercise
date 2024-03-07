@@ -1,0 +1,89 @@
+173-198-127-025:GitDemo lam3y$ cd GitDemo
+-bash: cd: GitDemo: No such file or directory
+173-198-127-025:GitDemo lam3y$ ls
+ColorChangingText	learn_branch
+173-198-127-025:GitDemo lam3y$ cd
+173-198-127-025:~ lam3y$ cd
+173-198-127-025:~ lam3y$ clear
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+173-198-127-025:~ lam3y$ cd GitDemo
+173-198-127-025:GitDemo lam3y$ mkdir branch_time
+173-198-127-025:GitDemo lam3y$ cd branch_time
+173-198-127-025:branch_time lam3y$ git init
+Initialized empty Git repository in /Users/lam3y/GitDemo/branch_time/.git/
+173-198-127-025:branch_time lam3y$ touch first.txt
+173-198-127-025:branch_time lam3y$ echo first_txt > first.txt
+173-198-127-025:branch_time lam3y$ git add .
+173-198-127-025:branch_time lam3y$ git commit -m "adding first file"
+[main (root-commit) a43b023] adding first file
+ 1 file changed, 1 insertion(+)
+ create mode 100644 first.txt
+173-198-127-025:branch_time lam3y$ git checkout -b amazing_feature
+Switched to a new branch 'amazing_feature'
+173-198-127-025:branch_time lam3y$ touch first.txt
+173-198-127-025:branch_time lam3y$ echo new_first > first.txt
+173-198-127-025:branch_time lam3y$ git add .
+173-198-127-025:branch_time lam3y$ git commit -m "adding text"
+[amazing_feature 45040b2] adding text
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+173-198-127-025:branch_time lam3y$ git checkout main
+Switched to branch 'main'
+173-198-127-025:branch_time lam3y$ echo conflicting_text > first.txt
+173-198-127-025:branch_time lam3y$ git merge amazing_feature
+Updating a43b023..45040b2
+error: Your local changes to the following files would be overwritten by merge:
+	first.txt
+Please commit your changes or stash them before you merge.
+Aborting
+173-198-127-025:branch_time lam3y$ git remote add origin https://github.com/amylnsng13/Merge-Exercise-.git
+173-198-127-025:branch_time lam3y$ git branch -M main
+173-198-127-025:branch_time lam3y$ git push -u origin main
+Username for 'https://github.com': amylnsng13
+Password for 'https://amylnsng13@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/amylnsng13/Merge-Exercise-.git/'
+173-198-127-025:branch_time lam3y$ git remote add origin https://github.com/amylnsng13/Merge-Exercise-.git
+error: remote origin already exists.
+173-198-127-025:branch_time lam3y$ git branch -M main
+173-198-127-025:branch_time lam3y$ git push -u origin main
+Username for 'https://github.com': amylnsng13@gmail.com
+Password for 'https://amylnsng13@gmail.com@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/amylnsng13/Merge-Exercise-.git/'
+173-198-127-025:branch_time lam3y$ git remote add origin https://github.com/amylnsng13/Merge-Exercise-.git
+error: remote origin already exists.
+173-198-127-025:branch_time lam3y$ git branch -M main
+173-198-127-025:branch_time lam3y$ git push -u origin main
+Username for 'https://github.com': amylnsng13
+Password for 'https://amylnsng13@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/amylnsng13/Merge-Exercise-.git/'
+173-198-127-025:branch_time lam3y$ git remote add origin git@github.com:amylnsng13/Merge-Exercise-.git
+error: remote origin already exists.
+173-198-127-025:branch_time lam3y$ git branch -M main
+173-198-127-025:branch_time lam3y$ git push -u origin main
+Username for 'https://github.com': amylnsng13
+Password for 'https://amylnsng13@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/amylnsng13/Merge-Exercise-.git/'
+173-198-127-025:branch_time lam3y$ 
