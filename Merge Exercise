@@ -50,3 +50,5 @@ Updating a43b023..45040b2
 error: Your local changes to the following files would be overwritten by merge:
 	first.txt
 Please commit your changes or stash them before you merge.
+git add .
+git commit -m "updating first.txt text"
